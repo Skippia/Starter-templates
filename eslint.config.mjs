@@ -1,10 +1,8 @@
 import antfu from '@antfu/eslint-config'
-import functional from 'eslint-plugin-functional'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
 const allPathPattern = ['**/*.ts']
-const fpPathPattern = allPathPattern
 
 export default antfu(
   {
@@ -551,68 +549,6 @@ export default antfu(
         },
       ],
       'ts/no-non-null-assertion': 'off', // !!!
-    },
-  },
-  // ?------------FP TS CONFIG------------
-  {
-    files: [...fpPathPattern],
-    plugins: {
-      functional,
-    },
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-        allowDefaultProject: ['./vite.config.ts'],
-        defaultProject: './tsconfig.json',
-      },
-      globals: {
-        ...globals.node,
-      },
-    },
-    rules: {
-      //* Core
-      ...functional.configs.strict.rules,
-      ...functional.configs.externalTypeScriptRecommended.rules,
-      //* Other configs
-      ...functional.configs.currying.rules,
-      ...functional.configs.noExceptions.rules,
-      ...functional.configs.noMutations.rules,
-      ...functional.configs.noOtherParadigms.rules,
-      ...functional.configs.noStatements.rules,
-      ...functional.configs.stylistic.rules,
-      'functional/no-conditional-statements': ['error', { allowReturningBranches: true }],
-      'functional/no-expression-statements': ['error', { ignoreVoid: true, ignoreSelfReturning: true }],
-      'functional/functional-parameters': ['error', {
-        enforceParameterCount: false,
-        overrides: [
-          {
-            specifiers: [
-              {
-                from: 'file',
-              },
-            ],
-            options: {
-              enforceParameterCount: false,
-            },
-          },
-        ],
-      }],
-      'functional/type-declaration-immutability': ['off'],
-      // ! Is not compatible with FP-TS
-      // 'functional/prefer-immutable-types': ['error', {
-      //   enforcement: 'None',
-      //   ignoreInferredTypes: true,
-      //   parameters: {
-      //     enforcement: 'ReadonlyShallow',
-      //   },
-      // }],
-      'functional/prefer-immutable-types': ['off'],
-      'functional/no-return-void': 'off',
-      'functional/readonly-type': ['error', 'keyword'],
-      // ------------------------------------------------
-      'ts/explicit-function-return-type': 'error', // !!!
     },
   },
   {

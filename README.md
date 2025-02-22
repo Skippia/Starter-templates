@@ -13,11 +13,11 @@
 
 Basic set of typescript-based starter templates. To switch between template check git branches:
 
-1. Basic starter template based on pure typescript:
+1. Basic starter template based on pure typescript (**CURRENT SELECTED VERSION**):
 ```sh
 git checkout ts-template
 ```
-2. Functional programming starter template based on [FP-TS](https://github.com/gcanti/fp-ts) (**CURRENT SELECTED VERSION**):
+2. Functional programming starter template based on [fp-ts](https://github.com/gcanti/fp-ts):
 ```sh
 git checkout fp-ts-template
 ```
@@ -28,7 +28,6 @@ git checkout nest-template
 
 ## Core dependencies
 
-- [fp-ts](https://github.com/gcanti/fp-ts) – functional programming in TypeScript.
 - [zod](https://github.com/colinhacks/zod) – typeScript-first schema validation with static type inference (for validating environment variables).
 
 ## DX dependencies
@@ -84,8 +83,6 @@ git checkout nest-template
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config) – ESLint configuration tailored for modern TypeScript projects based on flat eslint config.
 
-- [eslint-plugin-functional](https://github.com/eslint-functional/eslint-plugin-functional) – ESLint plugin enforcing the accordance to functional programming paradigm.
-
 ### CI/CD
 
 - [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) – simplifies Git hook management (e.g. running typechecks before push) to enforce code quality.
@@ -96,7 +93,7 @@ git checkout nest-template
   - check `releaserc.json` file for manual configuration
     - `docs` prefix will trigger new patch release, if you want avoid this behavior remove appropriate option from config file
 
-- [ci/cd workflows](https://github.com/skippia/universal-starter-templates/blob/fp-ts-template/.github/workflows) – automated building, security audit, linting, generating BSOM and semantic release with best practices of confuring github pipelines.
+- [ci/cd workflows](https://github.com/skippia/universal-starter-templates/blob/ts-template/.github/workflows) – automated building, security audit, linting, generating BSOM and semantic release with best practices of confuring github pipelines.
   - check `.github/workflows/ci.yml` file for manual configuration
     - update branch names for `push` and `pull_request` events
     - uncomment `release` job to enable auto semantic release

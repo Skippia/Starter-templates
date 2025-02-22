@@ -60,7 +60,6 @@
     "update-git-hooks": "npx simple-git-hooks"
   },
   "dependencies": {
-    "fp-ts": "^2.16.9",
     "zod": "^3.24.2"
   },
   "devDependencies": {
@@ -76,7 +75,6 @@
     "cz-conventional-changelog": "^3.3.0",
     "dependency-cruiser": "^16.10.0",
     "eslint": "^9.21.0",
-    "eslint-plugin-functional": "^8.0.0",
     "globals": "^16.0.0",
     "prettier": "^3.5.2",
     "rimraf": "^6.0.1",
