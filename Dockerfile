@@ -2,7 +2,7 @@
 # BUILD FOR LOCAL DEVELOPMENT #
 ###############################
 
-FROM node:18-alpine As development
+FROM node:18.20.7-alpine As development
 
 WORKDIR /usr/src/app
 
@@ -34,7 +34,7 @@ ENTRYPOINT ["sh","./docker/entrypoint.sh"]
 # BUILD FOR PRODUCTION #
 ########################
 
-FROM node:18-alpine As build
+FROM node:18.20.7-alpine As build
 
 WORKDIR /usr/src/app
 
@@ -63,7 +63,7 @@ USER node
 # PRODUCTION #
 ##############
 
-FROM node:18-alpine As production
+FROM node:18.20.7-alpine As production
 
 WORKDIR /usr/src/app
 
