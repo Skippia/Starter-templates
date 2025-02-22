@@ -79,17 +79,17 @@ importers:
         specifier: 8.24.1
         version: 8.24.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
       vite:
-        specifier: 6.1.0
-        version: 6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)
+        specifier: 6.1.1
+        version: 6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)
       vite-bundle-analyzer:
         specifier: 0.17.1
         version: 0.17.1
       vite-plugin-dts:
         specifier: 4.5.0
-        version: 4.5.0(@types/node@20.17.19)(rollup@4.34.8)(typescript@5.7.3)(vite@6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0))
+        version: 4.5.0(@types/node@20.17.19)(rollup@4.34.8)(typescript@5.7.3)(vite@6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0))
       vite-tsconfig-paths:
         specifier: 5.1.4
-        version: 5.1.4(typescript@5.7.3)(vite@6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0))
+        version: 5.1.4(typescript@5.7.3)(vite@6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0))
 
 packages:
 
@@ -4074,8 +4074,8 @@ packages:
       vite:
         optional: true
 
-  vite@6.1.0:
-    resolution: {integrity: sha512-RjjMipCKVoR4hVfPY6GQTgveinjNuyLw+qruksLDvA5ktI1150VmcMBKmQaEWJhg/j6Uaf6dNCNA0AfdzUb/hQ==}
+  vite@6.1.1:
+    resolution: {integrity: sha512-4GgM54XrwRfrOp297aIYspIti66k56v16ZnqHvrIM7mG+HjDlAwS7p+Srr7J6fGvEdOJ5JcQ/D9T7HhtdXDTzA==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -8631,7 +8631,7 @@ snapshots:
 
   vite-bundle-analyzer@0.17.1: {}
 
-  vite-plugin-dts@4.5.0(@types/node@20.17.19)(rollup@4.34.8)(typescript@5.7.3)(vite@6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-plugin-dts@4.5.0(@types/node@20.17.19)(rollup@4.34.8)(typescript@5.7.3)(vite@6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
       '@microsoft/api-extractor': 7.50.1(@types/node@20.17.19)
       '@rollup/pluginutils': 5.1.4(rollup@4.34.8)
@@ -8644,24 +8644,24 @@ snapshots:
       magic-string: 0.30.17
       typescript: 5.7.3
     optionalDependencies:
-      vite: 6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
       - supports-color
 
-  vite-tsconfig-paths@5.1.4(typescript@5.7.3)(vite@6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-tsconfig-paths@5.1.4(typescript@5.7.3)(vite@6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
       debug: 4.4.0
       globrex: 0.1.2
       tsconfck: 3.1.5(typescript@5.7.3)
     optionalDependencies:
-      vite: 6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@6.1.0(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0):
+  vite@6.1.1(@types/node@20.17.19)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.3
