@@ -1,6 +1,3 @@
-import * as E from 'fp-ts/lib/Either'
-import * as TE from 'fp-ts/lib/TaskEither'
-
 /* eslint-disable no-redeclare */
 export function asyncPipe<A>(a: A): Promise<A>
 export function asyncPipe<A, B>(a: A, ab: AnyFunction<A, B>): Promise<B>
