@@ -17,7 +17,7 @@ Basic set of typescript-based starter templates. To switch between template chec
 ```sh
 git checkout ts-template
 ```
-2. Functional programming starter template based on [FP-TS](https://github.com/gcanti/fp-ts) (**CURRENT SELECTED VERSION**):
+2. Functional programming starter template based on [fp-ts](https://github.com/gcanti/fp-ts) (**CURRENT SELECTED VERSION**):
 ```sh
 git checkout fp-ts-template
 ```
