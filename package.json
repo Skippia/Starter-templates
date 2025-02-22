@@ -60,7 +60,7 @@
     "update-git-hooks": "npx simple-git-hooks"
   },
   "dependencies": {
-    "fp-ts": "^1.0.0",
+    "fp-ts": "^2.16.9",
     "zod": "3.2.0"
   },
   "devDependencies": {
@@ -71,15 +71,15 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "11.0.1",
     "@semantic-release/npm": "12.0.1",
-    "@semantic-release/release-notes-generator": "13.0.0",
+    "@semantic-release/release-notes-generator": "14.0.3",
     "@types/node": "20.1.0",
-    "cz-conventional-changelog": "2.0.0",
+    "cz-conventional-changelog": "3.3.0",
     "dependency-cruiser": "16.8.0",
     "eslint": "9.21.0",
     "eslint-plugin-functional": "8.0.0",
     "globals": "15.0.0",
     "prettier": "3.2.2",
-    "rimraf": "5.0.0",
+    "rimraf": "6.0.1",
     "semantic-release": "24.1.0",
     "simple-git-hooks": "2.10.0",
     "tsx": "4.1.0",
