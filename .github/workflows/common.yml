@@ -1,0 +1,102 @@
+name: Common (reusable) steps
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: Node.js version
+        required: true
+        type: string
+      run-audit:
+        description: Whether to run the audit step
+        required: false
+        type: boolean
+        default: false
+      run-lint:
+        description: Whether to run the eslint step
+        required: false
+        type: boolean
+        default: false
+      run-build:
+        description: Whether to run the build step
+        required: false
+        type: boolean
+        default: false
+      run-sbom:
+        description: Whether to run generation and upload SBOM artifacts step
+        required: false
+        type: boolean
+        default: false
+      run-release:
+        description: Whether to run semantic release step
+        required: false
+        type: boolean
+        default: false
+    secrets:
+      SECRET_NPM_TOKEN:
+        required: false
+      BOT_SECRET_GITHUB_TOKEN:
+        required: false
+
+jobs:
+  common:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: pnpm
+          cache-dependency-path: '**/pnpm-lock.yaml'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Security Audit
+        run: pnpm audit --prod
+        if: ${{ inputs.run-audit }}
+
+      - name: Lint
+        run: npm run eslint
+        if: ${{ inputs.run-lint }}
+
+      - name: Build project
+        run: npm run build
+        if: ${{ inputs.run-build }}
+        env:
+          NODE_ENV: production
+
+      - name: Generate SBOM
+        uses: anchore/sbom-action@f325610c9f50a54015d37c8d16cb3b0e2c8f4de0 # v0
+        if: ${{ inputs.run-sbom }}
+        with:
+          format: cyclonedx-json
+          output-file: sbom.json
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4
+        if: ${{ inputs.run-sbom }}
+        with:
+          name: build-artifacts
+          path: |
+            dist/
+          retention-days: 7
+
+      - name: Semantic release
+        if: ${{ inputs.run-release }}
+        run: npm run semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.SECRET_NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOT_SECRET_GITHUB_TOKEN }}
+          NPM_CONFIG_USERCONFIG: ./.npmrc
