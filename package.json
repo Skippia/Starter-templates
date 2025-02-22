@@ -38,7 +38,7 @@
     "dev": "npx tsx --env-file=.env --watch ./src/main.ts",
     "start": "npx tsx --env-file=.env ./src/main.ts",
     "start:prod": "NODE_ENV=production node --env-file=.env ./dist/main.js",
-    "debug": "npx tsx --inspect --env-file=.env ./src/main.ts",
+    "debug": "tsx --inspect --env-file=.env ./src/main.ts",
     "commit": "cz",
     "flamegraph": "NODE_ENV=production 0x -- node --env-file=.env ./dist/main.js",
     "graph:generate:nested": "npx depcruise src --include-only '^src' --progress  --config .dependency-cruiser.cjs --output-type dot | dot -T svg -Grankdir=TD | tee docs/dependency-graph-nested.svg | node node_modules/dependency-cruiser/bin/wrap-stream-in-html.mjs > docs/dependency-graph-nested.html",

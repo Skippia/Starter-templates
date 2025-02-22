@@ -1,8 +1,8 @@
-# Universal starter templates
+# Starter templates for smooth DX
 
 <p align="center">
   <a href="#description">Description</a> •
-  <a href="#core-dependencies">Core depenencies</a> •
+  <a href="#core-dependencies">Core dependencies</a> •
   <a href="#dx-dependencies">DX dependencies</a> •
   <a href="#package-commands">Package commands</a> •
   <a href="#pre-requisites">Pre-requisites</a> •
@@ -26,7 +26,7 @@ git checkout fp-ts-template
 git checkout nest-template
 ```
 
-## Core depenencies
+## Core dependencies
 
 - [fp-ts](https://github.com/gcanti/fp-ts) – functional programming in TypeScript.
 - [zod](https://github.com/colinhacks/zod) – typeScript-first schema validation with static type inference (for validating environment variables).
@@ -41,7 +41,7 @@ git checkout nest-template
   - check [official guide](https://docs.renovatebot.com/getting-started/installing-onboarding/) to install bot
   - check [interactive dashboard](https://developer.mend.io/) to configurate repository
   - check `renovate.json` file for manual configuration
-    - replace "fp-ts-template" branch for `baseBranches` field in `renovate.json` with your basic branch (for pull requests)
+    - replace `baseBranches`: ["ts-template", "fp-ts-template", "nest-template"] in `renovate.json` with your own branch(s) which should be track down by renovate bot
 
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates) – explicitly check and update project's dependencies.
 
@@ -78,7 +78,7 @@ git checkout nest-template
 
 - [Prettier](https://github.com/prettier/prettier) – code formatter **only** for resolving maximum line length (`printWidth`)
 
-- [.editorconfig](https://editorconfig.org/) – defines consistent coding styles (such as indentation, line endings, and charset) across different editors and IDEs. It helps ensure that all contributors follow the same formatting rules, regardless of their personal editor settings.
+- [.editorconfig](https://editorconfig.org/) – defines consistent coding styles (such as indentation, line endings, and charset) across different editors and IDEs. It helps ensure **that** all contributors follow the same formatting rules, regardless of their personal editor settings.
 
 - [ESLint](https://github.com/eslint/eslint) – enforces code quality and style rules, catching errors early in the development process.
 
@@ -94,12 +94,18 @@ git checkout nest-template
 
 - [semantic-release](https://github.com/semantic-release/semantic-release) (along with its plugins like @semantic-release/changelog, @semantic-release/commit-analyzer, @semantic-release/git, @semantic-release/github, @semantic-release/npm, and @semantic-release/release-notes-generator) – automates versioning, changelog generation, and release publishing, streamlining the entire release process.
   - check `releaserc.json` file for manual configuration
+    - `docs` prefix will trigger new patch release, if you want avoid this behavior remove appropriate option from config file
 
 - [ci/cd workflows](https://github.com/skippia/universal-starter-templates/blob/fp-ts-template/.github/workflows) – automated building, security audit, linting, generating BSOM and semantic release with best practices of confuring github pipelines.
+  - check `.github/workflows/ci.yml` file for manual configuration
+    - update branch names for `push` and `pull_request` events
+    - uncomment `release` job to enable auto semantic release
+    - create (and add it in repository secrets) `BOT_SECRET_GITHUB_TOKEN` with appropriate permissions (check `release.permissions`) in order to allow renovate bot push release commits directly into main branch bypassing rules
 
 ### Misc
 
 - [0x](https://github.com/davidmarkclements/0x) – generates flamegraphs for performance profiling and optimization insights.
+- **debugging** – permits to debug typescript code directly in vscode. For more information check official guide from [tsx](https://tsx.is/vscode)
 
 ## Package commands
 
@@ -108,7 +114,7 @@ git checkout nest-template
 | dev                      | `npx tsx --env-file=.env --watch ./src/main.ts`                                                                                                                                                                                                                                                                                                                             | Runs the application in development mode with file watching.       | Active development with auto‑reloading.                   |
 | start                    | `npx tsx --env-file=.env ./src/main.ts`                                                                                                                                                                                                                                                                                                                                      | Starts the application without watch mode.                         | Quick startup for local testing.                         |
 | start:prod               | `NODE_ENV=production node --env-file=.env ./dist/main.js`                                                                                                                                                                                                                                                                                                                   | Runs the production build of the application.                      | Production deployment and testing.                       |
-| debug                    | `npx tsx --inspect --env-file=.env ./src/main.ts`                                                                                                                                                                                                                                                                                                                            | Runs the application with Node.js inspector enabled.               | Debugging during development.                            |
+| debug                    | `npx tsx --inspect --env-file=.env ./src/main.ts`                                                                                                                                                                                                                                                                                                                            | Runs the application with Node.js inspector enabled (attach to process). In order to run debug in launch mode, use debug tab in vscode.               | Debugging during development                            |
 | commit                   | `cz`                                                                                                                                                                                                                                                                                                                                                                         | Launches Commitizen to standardize commit messages.                | Ensuring consistent commit messages.                     |
 | flamegraph               | `NODE_ENV=production 0x -- node --env-file=.env ./dist/main.js`                                                                                                                                                                                                                                                                                                               | Generates a flamegraph for performance profiling.                  | Analyzing performance bottlenecks.                       |
 | graph:generate:nested    | `npx depcruise src --include-only '^src' --progress  --config .dependency-cruiser.cjs --output-type dot \| dot -T svg -Grankdir=TD \| tee docs/dependency-graph-nested.svg \| node node_modules/dependency-cruiser/bin/wrap-stream-in-html.mjs > docs/dependency-graph-nested.html`                                                   | Generates a nested dependency graph of the source code.            | Detailed visualization of module interdependencies.      |
@@ -136,27 +142,27 @@ git checkout nest-template
 
 ## Quick start
 
-1. Clone actual version of app (or only last version of app):
+1. Clone all templates or only specific one:
 ```sh
 git clone https://github.com/Skippia/universal-starter-templates.git
 ```
-or
+- `ts-template`
 ```sh
-git clone --depth 1 https://github.com/Skippia/universal-starter-templates.git
+git clone --single-branch --branch ts-template https://github.com/Skippia/universal-starter-templates.git
+```
+- `fp-ts-template`
+```sh
+git clone --single-branch --branch fp-ts-template https://github.com/Skippia/universal-starter-templates.git
+```
+- `nest-template`
+```sh
+git clone --single-branch --branch nest-template https://github.com/Skippia/universal-starter-templates.git
 ```
 2. Checkout directory and install dependencies:
 ```sh
 cd universal-starter-templates && pnpm i
 ```
-3. Build project:
-```sh
-npm run build
-```
-4. Run project:
-```sh
-npm run start
-```
-5. (Optionally) install git hooks (by default – `typecheck` project files on `git push`):
+3. (Optionally) install git hooks (by default – `typecheck` project files on `git push`):
 ```sh
 npm run update-git-hooks
 ```
