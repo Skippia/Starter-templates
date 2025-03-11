@@ -52,8 +52,8 @@ importers:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
       eslint-plugin-functional:
-        specifier: ^8.0.0
-        version: 8.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
+        specifier: ^9.0.1
+        version: 9.0.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       globals:
         specifier: ^16.0.0
         version: 16.0.0
@@ -1677,8 +1677,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-functional@8.0.0:
-    resolution: {integrity: sha512-3lY0A1cOMZ4PvELU9NNaL20Go5CQoFdGTvPZtrHlfv61spqa+10rI3tSF5bSBxrEqvHv0IsIWvilJ3/mYSfTdw==}
+  eslint-plugin-functional@9.0.1:
+    resolution: {integrity: sha512-FR9b/LH2ODuGURSjGlAiEn5LkK+Bumwo0mZHmcSB3SDXCmzQfhcnLCTXL69p/jElWEASSRe4rmarfhHLhAnbXw==}
     engines: {node: '>=v18.18.0'}
     peerDependencies:
       eslint: ^9.0.0
@@ -5913,7 +5913,7 @@ snapshots:
       eslint: 9.22.0(jiti@2.4.2)
       eslint-compat-utils: 0.5.1(eslint@9.22.0(jiti@2.4.2))
 
-  eslint-plugin-functional@8.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2):
+  eslint-plugin-functional@9.0.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2):
     dependencies:
       '@typescript-eslint/utils': 8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       deepmerge-ts: 7.1.5
