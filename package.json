@@ -82,7 +82,7 @@
     "simple-git-hooks": "^2.11.1",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.26.0",
+    "typescript-eslint": "^8.26.1",
     "vite": "^6.2.1",
     "vite-bundle-analyzer": "^0.17.1",
     "vite-plugin-dts": "^4.5.3",
