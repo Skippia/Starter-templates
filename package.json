@@ -2,7 +2,7 @@
   "name": "universal-starter-templates",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.6.4",
+  "packageManager": "pnpm@10.6.5",
   "description": "Basic start template for NodeJS projects based on typescript",
   "author": "Skippia",
   "license": "ISC",
