@@ -72,7 +72,7 @@
     "@semantic-release/github": "^11.0.1",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.3",
-    "@types/node": "^22.13.14",
+    "@types/node": "^22.13.16",
     "cz-conventional-changelog": "^3.3.0",
     "dependency-cruiser": "^16.10.0",
     "eslint": "^9.23.0",
