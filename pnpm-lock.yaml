@@ -46,8 +46,8 @@ importers:
         specifier: ^3.3.0
         version: 3.3.0(@types/node@22.14.0)(typescript@5.8.2)
       dependency-cruiser:
-        specifier: ^16.10.0
-        version: 16.10.0
+        specifier: ^16.10.1
+        version: 16.10.1
       eslint:
         specifier: ^9.23.0
         version: 9.23.0(jiti@2.4.2)
@@ -1580,8 +1580,8 @@ packages:
   defined@1.0.1:
     resolution: {integrity: sha512-hsBd2qSVCRE+5PmNdHt1uzyrFu5d3RwmFDKzyNZMFq/EwDNJF7Ee5+D5oEKF0hU6LhtoUF1macFvOe4AskQC1Q==}
 
-  dependency-cruiser@16.10.0:
-    resolution: {integrity: sha512-o6pEB8X/XS0AjpQBhPJW3pSY7HIviRM7+G601T9ruV63NVJC4DxLMA+a1VzZlKOzO2fO6JKRHjRmGjzZZHEFYA==}
+  dependency-cruiser@16.10.1:
+    resolution: {integrity: sha512-Uw8/emAfzD+Zcua6Hfg1wCnskJd2QSRGKw5tUWrCtA8PBSz+n/zfUYCTjFi9MwdiTA5oecN93FBvh9jJhTLs4A==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -5870,7 +5870,7 @@ snapshots:
 
   defined@1.0.1: {}
 
-  dependency-cruiser@16.10.0:
+  dependency-cruiser@16.10.1:
     dependencies:
       acorn: 8.14.1
       acorn-jsx: 5.3.2(acorn@8.14.1)
