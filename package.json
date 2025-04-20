@@ -60,7 +60,7 @@
     "update-git-hooks": "npx simple-git-hooks"
   },
   "dependencies": {
-    "zod": "^3.24.2"
+    "zod": "^3.24.3"
   },
   "devDependencies": {
     "0x": "^5.8.0",
