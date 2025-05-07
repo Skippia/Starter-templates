@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       zod:
-        specifier: ^3.24.3
+        specifier: ^3.24.4
         version: 3.24.4
     devDependencies:
       0x:
