@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "fp-ts": "^2.16.10",
-    "zod": "^3.24.3"
+    "zod": "^3.24.4"
   },
   "devDependencies": {
     "0x": "^5.8.0",
