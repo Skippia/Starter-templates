@@ -85,7 +85,7 @@
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.1",
-    "vite": "^6.3.4",
+    "vite": "^6.3.5",
     "vite-bundle-analyzer": "^0.17.3",
     "vite-plugin-dts": "^4.5.3",
     "vite-tsconfig-paths": "^5.1.4"
