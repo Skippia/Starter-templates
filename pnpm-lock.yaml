@@ -37,7 +37,7 @@ importers:
         specifier: ^14.0.3
         version: 14.0.3(semantic-release@24.2.5(typescript@5.8.3))
       '@types/node':
-        specifier: ^22.15.27
+        specifier: ^22.15.29
         version: 22.15.29
       cz-conventional-changelog:
         specifier: ^3.3.0
@@ -46,7 +46,7 @@ importers:
         specifier: ^16.10.2
         version: 16.10.2
       eslint:
-        specifier: ^9.27.0
+        specifier: ^9.28.0
         version: 9.28.0(jiti@2.4.2)
       globals:
         specifier: ^16.2.0
