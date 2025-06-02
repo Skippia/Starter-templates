@@ -40,7 +40,7 @@ importers:
         specifier: ^14.0.3
         version: 14.0.3(semantic-release@24.2.5(typescript@5.8.3))
       '@types/node':
-        specifier: ^22.15.24
+        specifier: ^22.15.27
         version: 22.15.29
       cz-conventional-changelog:
         specifier: ^3.3.0
