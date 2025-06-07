@@ -60,7 +60,7 @@
     "update-git-hooks": "npx simple-git-hooks"
   },
   "dependencies": {
-    "zod": "^3.25.46"
+    "zod": "^3.25.50"
   },
   "devDependencies": {
     "0x": "^5.8.0",
@@ -82,7 +82,7 @@
     "simple-git-hooks": "^2.13.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.33.0",
+    "typescript-eslint": "^8.33.1",
     "vite": "^6.3.5",
     "vite-bundle-analyzer": "^0.17.3",
     "vite-plugin-dts": "^4.5.4",
