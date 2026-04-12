@@ -21,10 +21,6 @@ git checkout ts-template
 ```sh
 git checkout fp-ts-template
 ```
-3. Basic starter template based on [Nest.js](https://github.com/nestjs/nest):
-```sh
-git checkout nest-template
-```
 
 ## Core dependencies
 
@@ -41,7 +37,7 @@ git checkout nest-template
   - check [official guide](https://docs.renovatebot.com/getting-started/installing-onboarding/) to install bot
   - check [interactive dashboard](https://developer.mend.io/) to configurate repository
   - check `renovate.json` file for manual configuration
-    - replace `baseBranches`: ["ts-template", "fp-ts-template", "nest-template"] in `renovate.json` with your own branch(s) which should be track down by renovate bot
+    - replace `baseBranches`: ["ts-template", "fp-ts-template"] in `renovate.json` with your own branch(s) which should be track down by renovate bot
 
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates) – explicitly check and update project's dependencies.
 
@@ -153,10 +149,6 @@ git clone --single-branch --branch ts-template https://github.com/Skippia/univer
 - `fp-ts-template`
 ```sh
 git clone --single-branch --branch fp-ts-template https://github.com/Skippia/universal-starter-templates.git
-```
-- `nest-template`
-```sh
-git clone --single-branch --branch nest-template https://github.com/Skippia/universal-starter-templates.git
 ```
 2. Checkout directory and install dependencies:
 ```sh
